@@ -1,0 +1,33 @@
+{
+  "games": [
+    {
+      "id": "pong",
+      "title": "פונג",
+      "description": "משחק פונג קלאסי לשני שחקנים. שחקן שמאל: W/S, שחקן ימין: חצים למעלה/למטה.",
+      "folder": "pong",
+      "badges": ["classic", "fast"]
+    },
+    {
+      "id": "snake",
+      "title": "סנייק",
+      "description": "משחק הנחש הקלאסי. השתמש בחצים כדי לנוע ולאסוף אוכל. היזהר לא להתנגש בעצמך!",
+      "folder": "snake",
+      "badges": ["classic", "fast"]
+    },
+    {
+      "id": "tictactoe",
+      "title": "איקס עיגול",
+      "description": "משחק איקס עיגול קלאסי לשני שחקנים. נסה ליצור שורה של 3 סימנים שלך.",
+      "folder": "tictactoe",
+      "badges": ["classic"]
+    },
+    {
+      "id": "trivia",
+      "title": "טריוויה",
+      "description": "משחק טריוויה עם שאלות ידע כללי. בחר את התשובה הנכונה ובדוק כמה אתה יודע!",
+      "folder": "trivia",
+      "badges": ["new"]
+    }
+  ]
+}
+

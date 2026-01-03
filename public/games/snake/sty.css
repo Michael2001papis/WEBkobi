@@ -1,0 +1,197 @@
+/* כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    direction: rtl;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 700px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+#score-display {
+    font-size: 1.5rem;
+    color: white;
+    margin: 15px 0;
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+/* כפתור חידוש משחק */
+#restartBtn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+#restartBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+#restartBtn:active {
+    transform: translateY(0);
+}
+
+/* בחירת קושי */
+.difficulty-selector {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.difficulty-select {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.difficulty-select:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.difficulty-select:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.difficulty-select option {
+    background: #667eea;
+    color: white;
+}
+
+/* סטטיסטיקות */
+.stats-panel {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+}
+
+/* עיצוב לקנבס */
+#gameCanvas {
+    background: rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #score-display {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+    }
+
+    #gameCanvas {
+        max-width: 100%;
+    }
+
+    #restartBtn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #score-display {
+        font-size: 1rem;
+    }
+}

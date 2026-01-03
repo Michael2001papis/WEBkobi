@@ -1,0 +1,47 @@
+.section {
+  width: 100%;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.padding-sm {
+  padding: var(--spacing-md) 0;
+}
+
+.padding-md {
+  padding: var(--spacing-lg) 0;
+}
+
+.padding-lg {
+  padding: var(--spacing-xl) 0;
+}
+
+.padding-xl {
+  padding: calc(var(--spacing-xl) * 1.5) 0;
+}
+
+.default {
+  background: var(--color-background);
+}
+
+.muted {
+  background: var(--color-surface);
+}
+
+.accent {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+@media (max-width: 768px) {
+  .padding-lg {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .padding-xl {
+    padding: var(--spacing-xl) 0;
+  }
+}
+

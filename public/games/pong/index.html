@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong - משחק פונג</title>
+    <base href="./">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>    
+</head>
+<body>
+    <div id="gameArea">
+        <div class="header">
+            <h1>פונג</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <span class="player-name">שחקן שמאל</span>
+                    <span class="score-value" id="leftScore">0</span>
+                </div>
+                <div class="score-divider">:</div>
+                <div class="score-box">
+                    <span class="player-name">שחקן ימין</span>
+                    <span class="score-value" id="rightScore">0</span>
+                </div>
+            </div>
+        </div>
+        <canvas id="pong"></canvas>
+        <div class="difficulty-selector">
+            <label>רמת קושי:</label>
+            <select id="difficultySelect" class="difficulty-select">
+                <option value="easy">קל</option>
+                <option value="medium" selected>בינוני</option>
+                <option value="hard">קשה</option>
+            </select>
+        </div>
+        <div class="controls">
+            <button class="button button-primary" id="startBtn">
+                <span>התחל משחק</span>
+            </button>
+            <button class="button button-secondary" id="stopBtn">
+                <span>עצור</span>
+            </button>
+            <button class="button button-secondary" id="resetBtn">
+                <span>איפוס</span>
+            </button>
+        </div>
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-label">משחקים</span>
+                <span class="stat-value" id="gamesPlayed">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">ניצחונות</span>
+                <span class="stat-value" id="gamesWon">0</span>
+            </div>
+        </div>
+        <div class="instructions">
+            <p><strong>שחקן שמאל:</strong> W (למעלה) / S (למטה)</p>
+            <p><strong>שחקן ימין:</strong> ↑ (למעלה) / ↓ (למטה)</p>
+        </div>
+        <div id="message" class="message hidden"></div>
+    </div>
+</body>
+</html>
+

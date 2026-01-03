@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סנייק - משחק הנחש</title>
+    <base href="./">
+    <link rel="stylesheet" href="sty.css">
+    <script src="scr.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>משחק סנייק</h1>
+        <div class="difficulty-selector">
+            <label>רמת קושי:</label>
+            <select id="difficultySelect" class="difficulty-select">
+                <option value="easy">קל</option>
+                <option value="medium" selected>בינוני</option>
+                <option value="hard">קשה</option>
+            </select>
+        </div>
+        <div id="score-display" style="color: white; font-size: 20px; margin: 10px;">ניקוד: 0</div>
+        <canvas id="gameCanvas"></canvas>
+        <button id="restartBtn">חידוש משחק</button>
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-label">משחקים</span>
+                <span class="stat-value" id="gamesPlayed">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">שיא</span>
+                <span class="stat-value" id="highScoreDisplay">0</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
